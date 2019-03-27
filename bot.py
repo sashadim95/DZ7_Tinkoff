@@ -1,10 +1,8 @@
 import telebot
 from yandex_translate import YandexTranslate
 
-bot = telebot.TeleBot("733723493:AAGmY4EwZHYN8NQWaAtCVvMHwtfCr-GonXA")
-translate = YandexTranslate('trnsl.1.1.20190325T202409Z.cc0a6abf4f2d9d22.429414f798511a01ce5a197875dcc26fd14f10b3')
-
-com = 'none'
+bot = telebot.TeleBot("my_token")
+translate = YandexTranslate('traslate_token')
 
 @bot.message_handler(commands=['start', 'help'])
 def handle_start_help(message):
