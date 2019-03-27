@@ -11,10 +11,7 @@ def handle_start_help(message):
 @bot.message_handler(content_types=["text"])
 def repeat_all_messages(message):
     bot.send_message(message.chat.id, message.text)
-    if translate.detect(message.text) == 'ru':
-        bot.send_message(message.chat.id, translate.translate(message.text, 'en').get('text')[0])
-    else:
-        pass
+    bot.send_message(message.chat.id, translate.translate(message.text, 'en').get('text')[0])
 
 @bot.message_handler(content_types=['document', 'audio', 'voice', 'photo'])
 def handle_document_audio(message):
